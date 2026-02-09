@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - TransCarga Express</title>
+    <meta name="description" content="Servicios especializados de transporte de carga: general, refrigerada, mudanzas e internacional.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="Index.html" class="logo">
+                    <img src="imageWEB/logoarr.png" alt="TransCarga ARR Logo" class="logo-img">
+                    <span>TransCarga</span>ARR
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="Index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="servicios.html" class="nav-link active"><i class="fas fa-shipping-fast"></i> Servicios</a></li>
+                    <li><a href="Nosotros.html" class="nav-link"><i class="fas fa-users"></i> Nosotros</a></li>
+                    <li><a href="contacto.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section de Servicios -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Servicios <span class="highlight">Especializados</span></h1>
+                <p class="hero-subtitle">Soluciones logísticas a medida para cada tipo de carga</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <section class="services-detailed">
+        <div class="container">
+            <!-- Servicio 1: Carga General -->
+            <div class="service-detail-card" id="carga-general">
+                <div class="service-detail-image">
+                    <img src="imageWEB/fondos/fondoservicios.png" 
+                         alt="Carga General - Transporte de mercancías diversas" 
+                         class="service-main-image"
+                         data-zoom="imageWEB/fondos/fondoservicios.png">
+                </div>
+                <div class="service-detail-content">
+                    <h2><i class="fas fa-truck-loading"></i> Carga General</h2>
+                    <p class="service-intro">Transporte de mercancías diversas con el más alto estándar de seguridad y eficiencia.</p>
+                    
+                    <div class="service-features">
+                        <h3><i class="fas fa-check-circle"></i> Ventajas</h3>
+                        <ul>
+                            <li><strong>Seguimiento GPS:</strong> Monitoreo en tiempo real 24/7</li>
+                            <li><strong>Seguro incluido:</strong> Cobertura total de la mercancía</li>
+                            <li><strong>Personal capacitado:</strong> Manejo profesional de carga</li>
+                            <li><strong>Documentación:</strong> Gestión completa de papeles</li>
+                        </ul>
+                    </div>
+
+                 <div class="service-equipment">
+    <h3><i class="fas fa-truck"></i>Equipo Disponible</h3>
+    <div class="equipment-grid-modal">
+        
+        <!-- RABÓN -->
+        <div class="equipment-card-modal" data-equipment="rabon">
+            <img src="imageWEB/rabon/rabon1.png" alt="Camión Rabón">
+            <div class="equipment-info">
+                <h4>Camiones Rabón</h4>
+                <p class="equipment-description">
+                    Ideales para entregas urbanas y carga mediana. Con capacidad de 3.5 toneladas, 
+                    perfectos para distribución en ciudad con maniobrabilidad excepcional.
+                </p>
+                <div class="equipment-specs-mini">
+                    <span><i class="fas fa-weight-hanging"></i> 3.5 Ton</span>
+                    <span><i class="fas fa-cube"></i> 18m³</span>
+                    <span><i class="fas fa-city"></i> Urbano</span>
+                </div>
+                <button class="btn-view-gallery" data-gallery="rabon">
+                    <i class="fas fa-images"></i> Ver Galería
+                </button>
+            </div>
+        </div>
+
+        <!-- TORTÓN -->
+        <div class="equipment-card-modal" data-equipment="torton">
+            <img src="imageWEB/torton/torton1.png" alt="Camión Tortón">
+            <div class="equipment-info">
+                <h4>Camiones Tortón</h4>
+                <p class="equipment-description">
+                    Unidades especializadas para cargas de hasta 15 toneladas. Ideales para 
+                    transporte regional con gran capacidad y equipados con sistemas de carga/descarga.
+                </p>
+                <div class="equipment-specs-mini">
+                    <span><i class="fas fa-weight-hanging"></i> 15 Ton</span>
+                    <span><i class="fas fa-cube"></i> 40m³</span>
+                    <span><i class="fas fa-road"></i> Regional</span>
+                </div>
+                <button class="btn-view-gallery" data-gallery="torton">
+                    <i class="fas fa-images"></i> Ver Galería
+                </button>
+            </div>
+        </div>
+
+        <!-- TRAILER -->
+        <div class="equipment-card-modal" data-equipment="trailer">
+            <img src="imageWEB/trailer/trailer1.png" alt="Trailer">
+            <div class="equipment-info">
+                <h4>Trailers</h4>
+                <p class="equipment-description">
+                    Para carga pesada y transportes de larga distancia. Con capacidad de 20 toneladas, 
+                    equipados con tecnología GPS y sistemas de seguridad avanzados.
+                </p>
+                <div class="equipment-specs-mini">
+                    <span><i class="fas fa-weight-hanging"></i> 20 Ton</span>
+                    <span><i class="fas fa-cube"></i> 90m³</span>
+                    <span><i class="fas fa-truck-moving"></i> Nacional</span>
+                </div>
+                <button class="btn-view-gallery" data-gallery="trailer">
+                    <i class="fas fa-images"></i> Ver Galería
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+                    <div class="service-cta">
+                        <a href="contacto.html?servicio=carga-general" class="btn btn-primary">
+                            <i class="fas fa-file-invoice-dollar"></i> Cotizar este servicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+<!-- Servicio 3: Mudanzas -->
+<div class="service-detail-card" id="mudanzas">
+    <div class="service-detail-image">
+        <img src="imageWEB/fondos/fondonosotros.png" 
+             alt="Mudanzas - Traslado seguro de enseres y muebles" 
+             class="service-main-image"
+             data-zoom="imageWEB/fondos/fondonosotros.png">
+    </div>
+    <div class="service-detail-content">
+        <h2><i class="fas fa-dolly"></i> Mudanzas</h2>
+        <p class="service-intro">Traslado completo de enseres domésticos, muebles y pertenencias con el cuidado y seguridad que tu hogar merece.</p>
+        
+        <div class="service-process">
+            <h3><i class="fas fa-route"></i> Nuestro Proceso de Mudanza</h3>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Cotización sin Compromiso</h4>
+                        <p>Evaluamos el volumen de tus pertenencias y seleccionamos el vehículo ideal</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Carga Organizada</h4>
+                        <p>Nuestro equipo carga tus muebles de forma ordenada y segura</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Transporte Rastreado</h4>
+                        <p>Traslado con GPS activo y seguro de carga incluido</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Descarga en Destino</h4>
+                        <p>Bajamos y acomodamos tus pertenencias en tu nuevo hogar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-vehicles">
+            <h3><i class="fas fa-truck-moving"></i> Vehículos Disponibles para Mudanza</h3>
+            <div class="vehicles-mudanza-grid">
+                <div class="vehicle-mudanza-card">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Camión Rabón</h4>
+                    <p class="vehicle-capacity">Capacidad: 3.5 Toneladas</p>
+                    <p class="vehicle-description">Ideal para mudanzas de departamentos pequeños o estudios. Volumen de 18m³.</p>
+                    <ul class="vehicle-features-mini">
+                        <li><i class="fas fa-couch"></i> 1-2 habitaciones</li>
+                        <li><i class="fas fa-door-open"></i> Fácil acceso urbano</li>
+                        <li><i class="fas fa-clock"></i> Entregas rápidas</li>
+                    </ul>
+                </div>
+                
+                <div class="vehicle-mudanza-card">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h4>Camión Tortón</h4>
+                    <p class="vehicle-capacity">Capacidad: 5 Toneladas</p>
+                    <p class="vehicle-description">Perfecto para mudanzas de casas medianas o departamentos grandes. Volumen de 28m³.</p>
+                    <ul class="vehicle-features-mini">
+                        <li><i class="fas fa-home"></i> 2-3 habitaciones</li>
+                        <li><i class="fas fa-shield-alt"></i> Mayor protección</li>
+                        <li><i class="fas fa-boxes"></i> Más volumen</li>
+                    </ul>
+                </div>
+                
+                <div class="vehicle-mudanza-card vehicle-highlight">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-trailer"></i>
+                    </div>
+                    <h4>Trailer</h4>
+                    <p class="vehicle-capacity">Capacidad: 20 Toneladas</p>
+                    <p class="vehicle-description">Para mudanzas completas de casas grandes o traslados de larga distancia. Volumen de 90m³.</p>
+                    <ul class="vehicle-features-mini">
+                        <li><i class="fas fa-building"></i> 4+ habitaciones</li>
+                        <li><i class="fas fa-map-marked-alt"></i> Rutas largas</li>
+                        <li><i class="fas fa-warehouse"></i> Carga completa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-cta">
+            <a href="contacto.html?servicio=mudanzas" class="btn btn-primary">
+                <i class="fas fa-file-invoice-dollar"></i> Cotizar mi mudanza
+            </a>
+        </div>
+    </div>
+</div>
+
+           <!-- Servicio 4: Transporte Nacional -->
+<div class="service-detail-card" id="nacional">
+    <div class="service-detail-image">
+        <img src="imageWEB/fondos/fondoservicios2.png" 
+             alt="Transporte Nacional - Cobertura en toda la República Mexicana" 
+             class="service-main-image"
+             data-zoom="imageWEB/fondos/fondoservicios2.png">
+    </div>
+    <div class="service-detail-content">
+        <h2><i class="fas fa-map-marked-alt"></i> Transporte Nacional</h2>
+        <p class="service-intro">Cobertura completa en los 32 estados de la República Mexicana con rastreo GPS, seguro de carga y entregas puntuales garantizadas.</p>
+        
+        <!-- Mapa Interactivo de Cobertura -->
+        <div class="national-coverage">
+            <h3><i class="fas fa-route"></i> Cobertura Nacional Garantizada</h3>
+            
+            <div class="coverage-stats">
+                <div class="coverage-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">32</span>
+                        <span class="stat-label">Estados</span>
+                    </div>
+                </div>
+                <div class="coverage-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Ciudades</span>
+                    </div>
+                </div>
+                <div class="coverage-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">25M+</span>
+                        <span class="stat-label">Km recorridos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NUEVO: Mapa de México -->
+    <div class="mexico-map-container">
+        <img src="imageWEB/fondos/mapademexico.png" 
+             alt="Mapa de México - Cobertura Nacional TransCarga ARR" 
+             class="mexico-map"
+             loading="lazy">
+        <div class="map-overlay">
+            <div class="map-legend">
+    <h4><i class="fas fa-map-marked-alt"></i> Cobertura Total</h4>
+    <ul>
+        <li><i class="fas fa-check-circle"></i> Región Norte</li>
+        <li><i class="fas fa-check-circle"></i> Región Centro</li>
+        <li><i class="fas fa-check-circle"></i> Región Occidente</li>
+        <li><i class="fas fa-check-circle"></i> Región Sur-Sureste</li>
+    </ul>
+</div>
+        </div>
+    </div>
+    
+    <!-- Estadísticas de Cobertura -->
+    <div class="coverage-stats">
+        <!-- ... contenido existente ... -->
+    </div>
+</div>
+
+        <!-- Zonas de Cobertura por Región -->
+        <div class="service-regions">
+            <h3><i class="fas fa-compass"></i> Regiones de Cobertura</h3>
+            
+            <div class="regions-grid">
+                <!-- Región Norte -->
+                <div class="region-card" data-region="norte">
+                    <div class="region-header">
+                        <div class="region-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h4>Región Norte</h4>
+                    </div>
+                    <div class="region-states">
+                        <span class="state-badge">Baja California</span>
+                        <span class="state-badge">Baja California Sur</span>
+                        <span class="state-badge">Sonora</span>
+                        <span class="state-badge">Chihuahua</span>
+                        <span class="state-badge">Coahuila</span>
+                        <span class="state-badge">Nuevo León</span>
+                        <span class="state-badge">Tamaulipas</span>
+                        <span class="state-badge">Durango</span>
+                        <span class="state-badge">Sinaloa</span>
+                    </div>
+                    <div class="region-time">
+                        <i class="fas fa-clock"></i>
+                        <span>Tiempo estimado: 1-3 días</span>
+                    </div>
+                </div>
+
+                <!-- Región Centro -->
+                <div class="region-card region-highlight" data-region="centro">
+                    <div class="region-header">
+                        <div class="region-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Región Centro</h4>
+                        <span class="badge-popular">MÁS SOLICITADA</span>
+                    </div>
+                    <div class="region-states">
+                        <span class="state-badge">Ciudad de México</span>
+                        <span class="state-badge">Estado de México</span>
+                        <span class="state-badge">Puebla</span>
+                        <span class="state-badge">Morelos</span>
+                        <span class="state-badge">Hidalgo</span>
+                        <span class="state-badge">Tlaxcala</span>
+                        <span class="state-badge">Querétaro</span>
+                        <span class="state-badge">Guanajuato</span>
+                        <span class="state-badge">Aguascalientes</span>
+                    </div>
+                    <div class="region-time">
+                        <i class="fas fa-clock"></i>
+                        <span>Tiempo estimado: 1-2 días</span>
+                    </div>
+                </div>
+
+                <!-- Región Occidente -->
+                <div class="region-card" data-region="occidente">
+                    <div class="region-header">
+                        <div class="region-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4>Región Occidente</h4>
+                    </div>
+                    <div class="region-states">
+                        <span class="state-badge">Jalisco</span>
+                        <span class="state-badge">Colima</span>
+                        <span class="state-badge">Michoacán</span>
+                        <span class="state-badge">Nayarit</span>
+                        <span class="state-badge">Zacatecas</span>
+                    </div>
+                    <div class="region-time">
+                        <i class="fas fa-clock"></i>
+                        <span>Tiempo estimado: 1-3 días</span>
+                    </div>
+                </div>
+
+                <!-- Región Sur-Sureste -->
+                <div class="region-card" data-region="sur">
+                    <div class="region-header">
+                        <div class="region-icon">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h4>Región Sur-Sureste</h4>
+                    </div>
+                    <div class="region-states">
+                        <span class="state-badge">Veracruz</span>
+                        <span class="state-badge">Oaxaca</span>
+                        <span class="state-badge">Chiapas</span>
+                        <span class="state-badge">Tabasco</span>
+                        <span class="state-badge">Campeche</span>
+                        <span class="state-badge">Yucatán</span>
+                        <span class="state-badge">Quintana Roo</span>
+                        <span class="state-badge">Guerrero</span>
+                    </div>
+                    <div class="region-time">
+                        <i class="fas fa-clock"></i>
+                        <span>Tiempo estimado: 2-4 días</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicios Incluidos en Transporte Nacional -->
+        <div class="service-included-national">
+            <h3><i class="fas fa-check-double"></i> Servicios Incluidos</h3>
+            
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h4>Rastreo GPS 24/7</h4>
+                    <p>Monitoreo en tiempo real de tu carga desde origen hasta destino</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Seguro de Carga</h4>
+                    <p>Cobertura total contra daños, pérdida o robo durante el traslado</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h4>Documentación Legal</h4>
+                    <p>Gestión completa de permisos SCT y carta porte digital</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Soporte Permanente</h4>
+                    <p>Atención personalizada durante todo el trayecto de tu envío</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>Entregas Programadas</h4>
+                    <p>Coordina fecha y hora exacta de entrega según tu disponibilidad</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h4>Carga y Descarga</h4>
+                    <p>Personal capacitado para manejo seguro de tu mercancía</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rutas Más Populares -->
+        <div class="popular-routes">
+            <h3><i class="fas fa-route"></i> Rutas Más Solicitadas</h3>
+            
+            <div class="routes-grid">
+                <div class="route-item">
+                    <div class="route-path">
+                        <span class="route-from">
+                            <i class="fas fa-map-marker-alt"></i>
+                            CDMX
+                        </span>
+                        <i class="fas fa-arrow-right route-arrow"></i>
+                        <span class="route-to">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Monterrey
+                        </span>
+                    </div>
+                    <div class="route-details">
+                        <span><i class="fas fa-road"></i> 920 km</span>
+                        <span><i class="fas fa-clock"></i> 24-36 hrs</span>
+                    </div>
+                </div>
+
+                <div class="route-item">
+                    <div class="route-path">
+                        <span class="route-from">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Guadalajara
+                        </span>
+                        <i class="fas fa-arrow-right route-arrow"></i>
+                        <span class="route-to">
+                            <i class="fas fa-map-marker-alt"></i>
+                            CDMX
+                        </span>
+                    </div>
+                    <div class="route-details">
+                        <span><i class="fas fa-road"></i> 550 km</span>
+                        <span><i class="fas fa-clock"></i> 18-24 hrs</span>
+                    </div>
+                </div>
+
+                <div class="route-item">
+                    <div class="route-path">
+                        <span class="route-from">
+                            <i class="fas fa-map-marker-alt"></i>
+                            CDMX
+                        </span>
+                        <i class="fas fa-arrow-right route-arrow"></i>
+                        <span class="route-to">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Cancún
+                        </span>
+                    </div>
+                    <div class="route-details">
+                        <span><i class="fas fa-road"></i> 1,650 km</span>
+                        <span><i class="fas fa-clock"></i> 48-60 hrs</span>
+                    </div>
+                </div>
+
+                <div class="route-item">
+                    <div class="route-path">
+                        <span class="route-from">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Tijuana
+                        </span>
+                        <i class="fas fa-arrow-right route-arrow"></i>
+                        <span class="route-to">
+                            <i class="fas fa-map-marker-alt"></i>
+                            CDMX
+                        </span>
+                    </div>
+                    <div class="route-details">
+                        <span><i class="fas fa-road"></i> 2,750 km</span>
+                        <span><i class="fas fa-clock"></i> 60-72 hrs</span>
+                    </div>
+                </div>
+
+                <div class="route-item">
+                    <div class="route-path">
+                        <span class="route-from">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Puebla
+                        </span>
+                        <i class="fas fa-arrow-right route-arrow"></i>
+                        <span class="route-to">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Veracruz
+                        </span>
+                    </div>
+                    <div class="route-details">
+                        <span><i class="fas fa-road"></i> 270 km</span>
+                        <span><i class="fas fa-clock"></i> 12-18 hrs</span>
+                    </div>
+                </div>
+
+                <div class="route-item">
+                    <div class="route-path">
+                        <span class="route-from">
+                            <i class="fas fa-map-marker-alt"></i>
+                            CDMX
+                        </span>
+                        <i class="fas fa-arrow-right route-arrow"></i>
+                        <span class="route-to">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Mérida
+                        </span>
+                    </div>
+                    <div class="route-details">
+                        <span><i class="fas fa-road"></i> 1,550 km</span>
+                        <span><i class="fas fa-clock"></i> 48-60 hrs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-cta">
+            <a href="contacto.html?servicio=nacional" class="btn btn-primary">
+                <i class="fas fa-file-invoice-dollar"></i> Cotizar envío nacional
+            </a>
+        </div>
+    </div>
+</div>
+    </section>
+
+   <!-- Comparativa de Servicios -->
+<section class="services-comparison">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Comparativa de <span class="highlight">Servicios</span></h2>
+            <p class="section-subtitle">Encuentra el servicio ideal para tu tipo de carga</p>
+        </div>
+        
+        <div class="comparison-table-wrapper">
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="feature-column">Característica</th>
+                            <th class="service-column">
+                                <div class="service-header">
+                                    <i class="fas fa-truck-loading"></i>
+                                    <span>Carga General</span>
+                                </div>
+                            </th>
+                            <th class="service-column">
+                                <div class="service-header">
+                                    <i class="fas fa-dolly"></i>
+                                    <span>Mudanzas</span>
+                                </div>
+                            </th>
+                            <th class="service-column highlight-column">
+                                <div class="service-header">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span>Nacional</span>
+                                    <span class="badge-popular-table">MÁS COMPLETO</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rastreo y Seguridad -->
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-satellite-dish"></i>
+                                Rastreo GPS 24/7
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-shield-alt"></i>
+                                Seguro de carga
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        
+                        <!-- Vehículos Disponibles -->
+                        <tr class="section-divider">
+                            <td colspan="4" class="section-title-row">
+                                <i class="fas fa-truck"></i> Vehículos Disponibles
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-truck"></i>
+                                Camión Rabón (3.5 Ton)
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-times-circle error"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-truck-loading"></i>
+                                Camión Tortón (5 Ton)
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-trailer"></i>
+                                Trailer (20 Ton)
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        
+                        <!-- Servicios Adicionales -->
+                        <tr class="section-divider">
+                            <td colspan="4" class="section-title-row">
+                                <i class="fas fa-concierge-bell"></i> Servicios Incluidos
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-file-contract"></i>
+                                Gestión de documentación
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><span class="badge-optional">Opcional</span></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-clipboard-list"></i>
+                                Carta porte digital (SCT)
+                            </td>
+                            <td><span class="badge-optional">Si aplica</span></td>
+                            <td><span class="badge-optional">Si aplica</span></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-people-carry"></i>
+                                Carga y descarga
+                            </td>
+                            <td><span class="badge-optional">Adicional</span></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-headset"></i>
+                                Soporte 24/7
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        
+                        <!-- Cobertura y Tiempos -->
+                        <tr class="section-divider">
+                            <td colspan="4" class="section-title-row">
+                                <i class="fas fa-map"></i> Cobertura y Tiempos
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-city"></i>
+                                Alcance geográfico
+                            </td>
+                            <td>Local/Regional</td>
+                            <td>Local/Regional</td>
+                            <td><strong>32 Estados</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-clock"></i>
+                                Tiempo de entrega estimado
+                            </td>
+                            <td>24-48 hrs<br><small class="text-muted">(Según distancia)</small></td>
+                            <td>24-48 hrs<br><small class="text-muted">(Según volumen)</small></td>
+                            <td>1-4 días<br><small class="text-muted">(Según destino)</small></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                <i class="fas fa-calendar-check"></i>
+                                Programación de entrega
+                            </td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                            <td><i class="fas fa-check-circle success"></i></td>
+                        </tr>
+                        
+                        <!-- Ideal Para -->
+                        <tr class="section-divider">
+                            <td colspan="4" class="section-title-row">
+                                <i class="fas fa-bullseye"></i> Ideal Para
+                            </td>
+                        </tr>
+                        <tr class="ideal-for-row">
+                            <td class="feature-name">
+                                <i class="fas fa-tags"></i>
+                                Tipo de envío recomendado
+                            </td>
+                            <td>
+                                <ul class="ideal-list">
+                                    <li>Mercancía comercial</li>
+                                    <li>Entregas urbanas</li>
+                                    <li>Distribución local</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="ideal-list">
+                                    <li>Mudanza de hogar</li>
+                                    <li>Mudanza de oficina</li>
+                                    <li>Traslado de muebles</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="ideal-list">
+                                    <li>Envíos interestatales</li>
+                                    <li>Distribución nacional</li>
+                                    <li>Carga de larga distancia</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Nota aclaratoria -->
+        <div class="comparison-note">
+            <i class="fas fa-info-circle"></i>
+            <p><strong>Nota importante:</strong> Todos nuestros servicios incluyen rastreo GPS en tiempo real y seguro de carga. Los tiempos de entrega son estimados y pueden variar según condiciones climáticas, tráfico y accesibilidad del destino. Para cotizaciones personalizadas, <a href="contacto.html">contáctanos</a>.</p>
+        </div>
+    </div>
+</section>
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Necesitas un servicio especializado?</h2>
+                <p>Nuestros expertos te ayudarán a elegir la mejor opción</p>
+                <a href="contacto.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-headset"></i> Contactar a un Asesor
+                </a>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="Index.html" class="logo">
+                        <img src="imageWEB/logoarr.png" alt="TransCarga ARR Logo" class="logo-img">
+                        <span>TransCarga</span>ARR
+                    </a>
+                    <p class="footer-description">
+                        Tu socio confiable en transporte de carga y soluciones logísticas integrales.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/TransCargaARR" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/TransCargaARR" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/transcarga_arr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/transcarga-arr" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/522212599490?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios" ><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="Index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="servicios.html#carga-general">Carga General</a></li>
+                        <li><a href="servicios.html#mudanzas">Mudanzas</a></li>
+                        <li><a href="servicios.html#internacional">Transporte nacional</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> (55) 221 259 9490</li>
+                        <li><i class="fas fa-envelope"></i> autotrans_rgz@hotmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Independencia Priv. Esfuezo No. 12</li>
+                        <li><i class="fas fa-clock"></i> Lun-Vie: 8:00 - 20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TransCarga ARR. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="contacto.html">Contacto</a>
+                    <a href="Nosotros.html">Nosotros</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- MODAL DE ZOOM PARA SERVICIOS (NUEVO SISTEMA) -->
+    <!-- ========================================== -->
+    <div id="serviceZoomModal" class="service-zoom-modal">
+        <div class="service-zoom-instruction">Haz clic fuera de la imagen para cerrar</div>
+        <button class="service-zoom-close-btn" id="serviceZoomClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="service-zoom-modal-content" id="serviceZoomContent">
+            <div class="service-zoom-image-container">
+                <img class="service-zoom-modal-image" id="serviceZoomImage" src="" alt="" loading="lazy">
+            </div>
+            <div class="service-zoom-text-area">
+                <h3 class="service-zoom-text-title" id="serviceZoomTitle"></h3>
+                <p class="service-zoom-text-description" id="serviceZoomDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALES EXISTENTES (para equipos) -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="">
+                <div class="image-info">
+                    <h3 id="imageTitle"></h3>
+                    <p id="imageDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal" class="modal">
+        <div class="modal-content equipment-modal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="equipmentTitle"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="equipment-details">
+                    <img id="equipmentImage" src="" alt="">
+                    <div class="equipment-specs">
+                        <h3>Especificaciones</h3>
+                        <div id="equipmentSpecs"></div>
+                        <button class="btn btn-primary" id="btnRequestEquipment">
+                            <i class="fas fa-truck"></i> Solicitar este equipo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Script específico para servicios.html
+        document.addEventListener('DOMContentLoaded', function() {
+            // ==========================================
+            // ZOOM INTERACTIVO PARA IMÁGENES DE SERVICIOS
+            // ==========================================
+            const serviceZoomModal = document.getElementById('serviceZoomModal');
+            const serviceZoomImage = document.getElementById('serviceZoomImage');
+            const serviceZoomTitle = document.getElementById('serviceZoomTitle');
+            const serviceZoomDescription = document.getElementById('serviceZoomDescription');
+            const serviceZoomClose = document.getElementById('serviceZoomClose');
+            
+            // Datos descriptivos para cada servicio
+            const serviceDescriptions = {
+                'Carga General': 'Transporte de mercancías diversas con el más alto estándar de seguridad y eficiencia. Seguimiento GPS en tiempo real 24/7, seguro incluido y personal capacitado para manejo profesional.',
+                'Mudanzas Empresariales': 'Traslado completo de oficinas, equipos y mobiliario con embalaje profesional incluido. Proceso integral desde evaluación hasta instalación en la nueva ubicación.',
+                'Transporte Internacional': 'Importación y exportación con gestión aduanal integral y documentación completa. Cobertura en múltiples países con seguimiento desde origen hasta destino.'
+            };
+            
+            // Configurar click en imágenes de servicios
+            document.querySelectorAll('.service-detail-image').forEach(container => {
+                const img = container.querySelector('.service-main-image');
+                
+                // Agregar indicador de zoom
+                const zoomIndicator = document.createElement('div');
+                zoomIndicator.className = 'zoom-indicator';
+                zoomIndicator.innerHTML = '<i class="fas fa-search-plus"></i>';
+                container.appendChild(zoomIndicator);
+                
+                // Click para abrir zoom
+                container.addEventListener('click', function(e) {
+                    // Evitar que se abra si se hace click en un enlace
+                    if (e.target.tagName === 'A' || e.target.closest('a')) return;
+                    
+                    const imageSrc = img.getAttribute('data-zoom') || img.src;
+                    const imageAlt = img.alt;
+                    
+                    // Extraer el nombre del servicio del alt
+                    let serviceName = 'Servicio Especializado';
+                    if (imageAlt.includes('Carga General')) serviceName = 'Carga General';
+                    else if (imageAlt.includes('Mudanzas')) serviceName = 'Mudanzas Empresariales';
+                    else if (imageAlt.includes('Transporte Internacional')) serviceName = 'Transporte Internacional';
+                    
+                    // Configurar modal
+                    serviceZoomImage.src = imageSrc;
+                    serviceZoomTitle.textContent = serviceName;
+                    serviceZoomDescription.textContent = serviceDescriptions[serviceName] || 
+                        'Servicio especializado de transporte con los más altos estándares de calidad y seguridad.';
+                    
+                    // Mostrar modal
+                    serviceZoomModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Efecto de carga suave
+                    serviceZoomImage.style.opacity = '0';
+                    serviceZoomImage.onload = function() {
+                        serviceZoomImage.style.transition = 'opacity 0.3s ease';
+                        serviceZoomImage.style.opacity = '1';
+                    };
+                });
+            });
+            
+            // Cerrar modal de zoom de servicios
+            serviceZoomClose.addEventListener('click', function() {
+                serviceZoomModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Cerrar al hacer clic fuera
+            serviceZoomModal.addEventListener('click', function(e) {
+                if (e.target === serviceZoomModal) {
+                    serviceZoomModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Cerrar con Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && serviceZoomModal.classList.contains('active')) {
+                    serviceZoomModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // ==========================================
+            // SISTEMA EXISTENTE PARA EQUIPOS (mantener)
+            // ==========================================
+            // Click en imágenes de equipos
+            document.querySelectorAll('.equipment-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const equipmentType = this.getAttribute('data-equipment');
+                    const equipmentData = {
+                        'camionetas': {
+                            title: 'Camionestas',
+                            image: 'imageWEB/rabon/rabon1.png',
+                            specs: [
+                                'Capacidad: 3.5 toneladas',
+                                'Volumen: 18 m³',
+                                'Combustible: Diésel',
+                                'Año: 2022-2023',
+                                'Seguimiento: GPS 24/7'
+                            ]
+                        },
+                        'camiones torton': {
+                            title: 'Camión 10 Toneladas',
+                            image: 'imageWEB/torton/torton1.png',
+                            specs: [
+                                'Capacidad: 10 toneladas',
+                                'Volumen: 40 m³',
+                                'Combustible: Diésel',
+                                'Año: 2021-2023',
+                                'Seguimiento: GPS + temperatura'
+                            ]
+                        },
+                        'trailer': {
+                            title: 'Trailer 20 Toneladas',
+                            image: 'imageWEB/trailer/trailer1.png',
+                            specs: [
+                                'Capacidad: 20 toneladas',
+                                'Volumen: 90 m³',
+                                'Combustible: Diésel',
+                                'Año: 2020-2023',
+                                'Seguimiento: GPS + telemetría'
+                            ]
+                        }
+                    };
+
+                    const data = equipmentData[equipmentType];
+                    if (data) {
+                        document.getElementById('equipmentTitle').textContent = data.title;
+                        document.getElementById('equipmentImage').src = data.image;
+                        
+                        const specsContainer = document.getElementById('equipmentSpecs');
+                        specsContainer.innerHTML = '';
+                        data.specs.forEach(spec => {
+                            const p = document.createElement('p');
+                            p.innerHTML = `<i class="fas fa-check"></i> ${spec}`;
+                            specsContainer.appendChild(p);
+                        });
+
+                        document.getElementById('equipmentModal').style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+
+                        // Botón para solicitar equipo
+                        document.getElementById('btnRequestEquipment').onclick = function() {
+                            window.location.href = `presupuesto.html?equipo=${encodeURIComponent(data.title)}`;
+                        };
+                    }
+                });
+            });
+
+            // Cerrar modales existentes
+            document.querySelectorAll('.close-modal').forEach(closeBtn => {
+                closeBtn.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+
+            // Cerrar al hacer clic fuera
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+    <script>
+            // ==========================================
+            // ANIMACIONES AL HACER SCROLL
+            // ==========================================
+            function animateOnScroll() {
+                const cards = document.querySelectorAll('.service-detail-card');
+                const windowHeight = window.innerHeight;
+                
+                cards.forEach(card => {
+                    const cardTop = card.getBoundingClientRect().top;
+                    
+                    if (cardTop < windowHeight - 100) {
+                        card.classList.add('visible');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Ejecutar una vez al cargar
+            
+            // ==========================================
+            // MEJORAS PARA LA TABLA DE COMPARACIÓN
+            // ==========================================
+            const tableCells = document.querySelectorAll('.comparison-table td');
+            tableCells.forEach(cell => {
+                if (cell.textContent === 'Opcional') {
+                    cell.setAttribute('data-tooltip', 'Disponible con costo adicional');
+                    cell.style.cursor = 'help';
+                } else if (cell.querySelector('.error')) {
+                    cell.setAttribute('data-tooltip', 'No disponible para este servicio');
+                    cell.style.cursor = 'help';
+                }
+            });
+            
+            // ==========================================
+            // BOTÓN DE WHATSAPP PARA COTIZACIÓN RÁPIDA
+            // ==========================================
+            document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si ya existe para evitar duplicados
+    if (document.querySelector('.whatsapp-float')) return;
+    
+    const whatsappBtn = document.createElement('a');
+    whatsappBtn.href = 'https://wa.me/522212599490?text=Hola,%20me%20interesa%20cotizar%20un%20servicio%20de%20transporte'; // Tu número real
+    whatsappBtn.className = 'whatsapp-float';
+    whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    whatsappBtn.target = '_blank';
+    whatsappBtn.rel = 'noopener noreferrer';
+    whatsappBtn.title = 'Cotizar por WhatsApp';
+    whatsappBtn.setAttribute('aria-label', 'Contactar por WhatsApp');
+    
+    document.body.appendChild(whatsappBtn);
+    
+    console.log('✅ Botón flotante de WhatsApp creado');
+});
+            // ==========================================
+            // SCROLL SUAVE A SERVICIOS
+            // ==========================================
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // ==========================================
+            // DETECCIÓN DE SERVICIO ACTUAL
+            // ==========================================
+            const urlParams = new URLSearchParams(window.location.search);
+            const servicioParam = urlParams.get('servicio');
+            
+            if (servicioParam) {
+                // Desplazar al servicio correspondiente
+                setTimeout(() => {
+                    const targetElement = document.getElementById(servicioParam);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Resaltar el servicio
+                        targetElement.style.boxShadow = '0 0 0 3px var(--accent)';
+                        setTimeout(() => {
+                            targetElement.style.boxShadow = '';
+                        }, 3000);
+                    }
+                }, 500);
+            }
+        
+    </script>
+    <!-- MODAL DE GALERÍA DE EQUIPOS -->
+<div id="equipmentGalleryModal" class="equipment-gallery-modal">
+    <div class="equipment-gallery-overlay"></div>
+    <div class="equipment-gallery-container-modal">
+        <div class="equipment-gallery-header">
+            <h3 id="galleryModalTitle">Galería de Equipos</h3>
+            <button class="equipment-gallery-close" id="closeGalleryModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="equipment-gallery-body">
+            <div class="equipment-gallery-grid-4col" id="galleryModalGrid">
+                <!-- Las imágenes se cargarán dinámicamente aquí -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LIGHTBOX PARA ZOOM DE IMÁGENES DE GALERÍA -->
+<div id="galleryImageLightbox" class="gallery-image-lightbox">
+    <button class="gallery-lightbox-close" id="closeImageLightbox">
+        <i class="fas fa-times"></i>
+    </button>
+    <img id="galleryLightboxImage" src="" alt="Vista ampliada">
+    <div class="gallery-lightbox-caption" id="galleryLightboxCaption"></div>
+</div>
+<script src="scripts.js"></script>  
+<script>
+// ENVÍO DE FORMULARIO CON AJAX
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.querySelector('.btn-submit-modern');
+    const formData = new FormData(this);
+    
+    // Validaciones
+    const email = document.getElementById('contactEmail').value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(email)) {
+        alert('Por favor ingresa un correo electrónico válido');
+        return;
+    }
+    
+    // Mostrar estado de carga
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+    
+    try {
+        const response = await fetch('contact-mail.php', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            // Mostrar resultado exitoso
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('contactResult').style.display = 'block';
+            document.getElementById('resultMessage').innerHTML = `
+                <p>${data.message}</p>
+                <p><strong>Revisa tu correo</strong> - Te hemos enviado una copia de confirmación.</p>
+            `;
+        } else {
+            alert(data.message || 'Hubo un error. Por favor intenta nuevamente.');
+        }
+    } catch (error) {
+        alert('Error de conexión. Por favor verifica tu internet e intenta nuevamente.');
+    } finally {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+    }
+});
+
+// Botón nuevo mensaje
+document.getElementById('btnNewMessage').addEventListener('click', function() {
+    document.getElementById('contactForm').style.display = 'block';
+    document.getElementById('contactResult').style.display = 'none';
+    document.getElementById('contactForm').reset();
+    document.getElementById('charCount').textContent = '0';
+});
+
+// Contador de caracteres
+document.getElementById('contactMensaje').addEventListener('input', function() {
+    const count = this.value.length;
+    document.getElementById('charCount').textContent = count;
+    if (count > 1000) {
+        this.value = this.value.substring(0, 1000);
+    }
+});
+    </script>   
+</body>
+</html>
