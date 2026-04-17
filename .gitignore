@@ -1,0 +1,12 @@
+# Archivos a ignorar en Git
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.vscode/
+.idea/
+*.log
+dist/
+build/
