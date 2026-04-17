@@ -1,4 +1,0 @@
-# Vercel configuration for static site deployment
-# See: https://vercel.com/docs/project-configuration
-
-{"version": 2, "public": true, "routes": [{"src": "/(.*)", "dest": "/public/$1"}]}
