@@ -14,8 +14,8 @@
         <div class="container">
             <nav class="navbar">
                 <a href="Index.html" class="logo">
-                    <img src="imageWEB/logoarr.png" alt="TransCarga ARR Logo" class="logo-img">
-                    <span>TransCarga</span>ARR
+                    <img src="imageWEB/logo6.png" alt="TransCarga ARR Logo" class="logo-img">
+                    
                 </a>
                 <ul class="nav-menu">
                     <li><a href="Index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
@@ -268,7 +268,7 @@
                     <div class="form-features">
                         <span><i class="fas fa-check"></i> Respuesta en 2 hrs</span>
                         <span><i class="fas fa-shield-alt"></i> 100% Seguro</span>
-                        <span><i class="fas fa-user-shield"></i> Confidencial</span>
+                        <span><i class="fas fa-envelope-open-text"></i> Confirmación automática</span>
                     </div>
                 </div>
 
@@ -324,6 +324,9 @@
                                    name="email"
                                    placeholder="ejemplo@correo.com"
                                    required>
+                            <small style="color: #666; font-size: 0.85rem; display: block; margin-top: 5px;">
+                                <i class="fas fa-info-circle"></i> Recibirás confirmación en este correo
+                            </small>
                         </div>
                         <div class="form-group-modern">
                             <label for="contactTelefono">
@@ -416,6 +419,10 @@
                     </div>
                     <h3>¡Mensaje Enviado Exitosamente!</h3>
                     <p id="resultMessage"></p>
+                    <div class="email-confirmation-notice">
+                        <i class="fas fa-envelope-circle-check"></i>
+                        <p>Revisa tu correo electrónico. Te hemos enviado una confirmación con los detalles de tu solicitud.</p>
+                    </div>
                     <div class="result-actions-modern">
                         <button class="btn-new-message" id="btnNewMessage">
                             <i class="fas fa-plus"></i>
@@ -432,14 +439,14 @@
     </div>
 </section>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="Index.html" class="logo">
                         <img src="imageWEB/logoarr.png" alt="TransCarga ARR Logo" class="logo-img">
-                        <span>TransCarga</span>ARR
+
                     </a>
                     <p class="footer-description">
                         Tu socio confiable en transporte de carga y soluciones logísticas integrales.
@@ -488,7 +495,6 @@
             </div>
         </div>
     </footer>
-
 <!-- ============================================ -->
 <!-- SDK DE EMAILJS - VERSIÓN ACTUALIZADA -->
 <!-- ============================================ -->
@@ -503,11 +509,11 @@
 </script>
 
 <!-- ============================================ -->
-<!-- SCRIPT DEL FORMULARIO DE CONTACTO -->
+<!-- SCRIPT CON SISTEMA DE DOBLE ENVÍO -->
 <!-- ============================================ -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Iniciando sistema de formulario...');
+    console.log('🚀 Iniciando sistema de formulario con confirmación automática...');
     
     const contactForm = document.getElementById('contactForm');
     const contactResult = document.getElementById('contactResult');
@@ -535,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // =============================================
-    // ENVÍO DEL FORMULARIO CON EMAILJS
+    // ENVÍO DEL FORMULARIO CON DOBLE EMAIL
     // =============================================
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -566,14 +572,33 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log('📋 Datos del formulario:', templateParams);
         
-        // ENVIAR CON EMAILJS
+        // =============================================
+        // ENVÍO 1: EMAIL PARA TI (PROPIETARIO)
+        // =============================================
+        console.log('📧 Enviando email al propietario...');
+        
         emailjs.send(
-            'service_cargaARR',      // ←Service ID
-            'template_ARR',      // ←Template ID
+            'service_cargaARR',           // Service ID
+            'template_ARR',           // Template para propietario
             templateParams
         )
         .then(function(response) {
-            console.log('✅ ¡Mensaje enviado exitosamente!', response.status, response.text);
+            console.log('✅ Email al propietario enviado', response.status);
+            
+            // =============================================
+            // ENVÍO 2: EMAIL DE CONFIRMACIÓN AL CLIENTE
+            // =============================================
+            console.log('📧 Enviando confirmación al cliente...');
+            
+            return emailjs.send(
+                'service_cargaARR',       // Mismo Service ID
+                'template_cliente',  // ← NUEVO TEMPLATE para cliente
+                templateParams
+            );
+        })
+        .then(function(response) {
+            console.log('✅ Confirmación al cliente enviada', response.status);
+            console.log('🎉 ¡AMBOS EMAILS ENVIADOS EXITOSAMENTE!');
             
             // Ocultar formulario
             contactForm.style.display = 'none';
@@ -582,10 +607,13 @@ document.addEventListener('DOMContentLoaded', function() {
             contactResult.style.display = 'block';
             resultMessage.innerHTML = `
                 <strong>¡Gracias ${templateParams.nombre}!</strong><br>
-                Hemos recibido tu mensaje correctamente.<br>
-                Nos pondremos en contacto contigo en las próximas <strong>2 horas hábiles</strong> a través de:<br>
-                📧 <strong>${templateParams.email}</strong><br>
-                📱 <strong>${templateParams.telefono}</strong>
+                Hemos recibido tu mensaje correctamente.<br><br>
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 4px solid #4caf50; margin: 15px 0;">
+                    <strong>✉️ Revisa tu correo:</strong><br>
+                    Te hemos enviado una confirmación a:<br>
+                    <strong>${templateParams.email}</strong>
+                </div>
+                Nos pondremos en contacto contigo en las próximas <strong>2 horas hábiles</strong>.
             `;
             
             // Scroll suave hacia el resultado
@@ -595,7 +623,8 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
             if (charCounter) charCounter.textContent = '0';
             
-        }, function(error) {
+        })
+        .catch(function(error) {
             console.error('❌ Error al enviar el mensaje:', error);
             
             // Restaurar botón
@@ -603,7 +632,7 @@ document.addEventListener('DOMContentLoaded', function() {
             btnText.style.display = 'flex';
             btnLoading.style.display = 'none';
             
-            // Mostrar mensaje de error detallado
+            // Mostrar mensaje de error
             alert(`❌ Error al enviar el mensaje\n\nDetalles técnicos: ${error.text || 'Error desconocido'}\n\nPor favor intenta nuevamente o contáctanos directamente por WhatsApp: +52 221 259 9490`);
         });
     });
@@ -628,10 +657,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    console.log('✅ Sistema de formulario EmailJS cargado correctamente');
+    console.log('✅ Sistema de formulario con confirmación automática cargado');
 });
 </script>
 
+<!-- CSS adicional para el aviso de confirmación -->
+<style>
+.email-confirmation-notice {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-left: 4px solid #2196f3;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.email-confirmation-notice i {
+    font-size: 2rem;
+    color: #2196f3;
+}
+
+.email-confirmation-notice p {
+    margin: 0;
+    color: #1565c0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+</style>
+
 <script src="scripts.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('page-loaded');
+            document.querySelectorAll('a.nav-link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    var href = this.getAttribute('href');
+                    if (href && !href.startsWith('#') && !href.startsWith('javascript')) {
+                        e.preventDefault();
+                        document.body.classList.add('page-exit');
+                        document.body.classList.remove('page-loaded');
+                        setTimeout(function() { window.location.href = href; }, 200);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
