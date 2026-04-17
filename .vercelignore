@@ -1,0 +1,5 @@
+# Ignore local backup and system files
+*.bak
+*.DS_Store
+node_modules/
+.env
