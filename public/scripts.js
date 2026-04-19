@@ -3,7 +3,7 @@
 // ================================================================
 const camionesData = {
     camion1: {
-        title: "Camión Rabón",
+        title: "Camionetas",
         image: "imageWEB/rabon/rabon1.png",
         images: [  // ← Carrusel imagenes
             "imageWEB/rabon/rabon1.png",
