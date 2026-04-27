@@ -9,7 +9,7 @@ const camionesData = {
             "imageWEB/rabon/rabon1.png",
             "imageWEB/rabon/rabon2.png",
         ],
-        description: "Vehículo ideal para entregas urbanas y carga mediana. Perfecto para distribución en ciudad con capacidad de 3.5 toneladas.",
+        description: "Vehículo ideal para entregas urbanas y carga mediana. Contamos desde camionetas desde capacidad de carga de 1 Ton. hasta diferentes capacidades de carga, contamos con caja seca, plataforma y redilas. Servicios disponibles por flete, en renta con operador, en renta sin operador y caja seca para almacenaje por día o por mes ",
         specs: {
             "Capacidad": "3.5 Toneladas",
             "Volumen": "18 metros cúbicos",
@@ -36,7 +36,7 @@ const camionesData = {
             "imageWEB/torton/torton9.png",
             "imageWEB/torton/torton4.png",
         ],
-        description: "Unidad especializada para cargas de hasta 15T. Ideal para transporte regional con gran capacidad de carga, manejamos unidades con maniobra de carga y descarga",
+        description: "Unidad especializada para cargas de hasta 15 Ton. Ideal para transporte regional con gran capacidad de carga, manejamos unidades con maniobra de carga y descarga. Contamos con caja seca cerrada, plataforma abierta, volteo, granel y jaula, al igual que equipo de descarga tanto rampo hidráulica y manual. Mercancia que transportamos, carga general paletizada, productos industriales, materiales de contruccion, alimentos a granel y carga genera",
         specs: {
             "Capacidad": "5 Toneladas",
             "Volumen": "28 metros cúbicos",
@@ -173,11 +173,11 @@ function crearModalZoom() {
             
             .modal-zoom-imagen-area {
                 background: #f8f9fa;
-                padding: 30px;
+                padding: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                min-height: 350px;
+                min-height: 300px;
             }
             
             .modal-zoom-img {
@@ -189,7 +189,7 @@ function crearModalZoom() {
             }
             
             .modal-zoom-info-flota {
-                padding: 25px 30px;
+                padding: 15px 30px;
                 background: white;
             }
             
@@ -205,6 +205,7 @@ function crearModalZoom() {
                 line-height: 1.7;
                 margin: 0;
                 font-size: 1.05rem;
+                text-align: justify;
             }
             
             @keyframes fadeInModal {
@@ -374,7 +375,7 @@ function crearModalEspecificaciones() {
             .modal-specs-header-flota {
                 background: linear-gradient(135deg, #2c3e50, #34495e);
                 color: white;
-                padding: 25px 30px;
+                padding: 15px 30px;
             }
             
             .modal-specs-titulo-flota {
@@ -393,11 +394,11 @@ function crearModalEspecificaciones() {
             
             .modal-specs-izquierda {
                 background: #f8f9fa;
-                padding: 40px 20px;
+                padding: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                min-height: 450px;
+                min-height: 300px;
             }
             
             .modal-specs-imagen {
@@ -409,7 +410,7 @@ function crearModalEspecificaciones() {
             }
             
             .modal-specs-derecha {
-                padding: 30px;
+                padding: 15px 15px 30px 15px;
             }
             
             .modal-specs-descripcion {
@@ -419,6 +420,7 @@ function crearModalEspecificaciones() {
                 padding-bottom: 20px;
                 border-bottom: 2px solid #eee;
                 font-size: 1.05rem;
+                text-align: justify;
             }
             
             .modal-specs-derecha h3 {
@@ -432,6 +434,10 @@ function crearModalEspecificaciones() {
             
             .modal-specs-derecha h3 i {
                 color: #3498db;
+            }
+            
+            .highlight-orange {
+                color: #FF8C00;
             }
             
             .modal-specs-grid-flota {
@@ -588,7 +594,25 @@ document.addEventListener('DOMContentLoaded', function() {
             // Actualizar contenido
             modalZoom.querySelector('.modal-zoom-img').src = camion.image;
             modalZoom.querySelector('.modal-zoom-titulo').textContent = camion.title;
-            modalZoom.querySelector('.modal-zoom-desc').textContent = camion.description;
+            let descriptionTextZoom = camion.description;
+            // Resaltar palabras clave en naranja solo para camion1 y camion2
+            if (camionId === 'camion1') {
+                descriptionTextZoom = descriptionTextZoom.replace(
+                    'caja seca, plataforma y redilas',
+                    '<span class="highlight-orange"><strong>caja seca, plataforma y redilas</strong></span>'
+                );
+            } else if (camionId === 'camion2') {
+                descriptionTextZoom = descriptionTextZoom.replace(
+                    'caja seca cerrada, plataforma abierta, volteo, granel y jaula',
+                    '<span class="highlight-orange"><strong>caja seca cerrada, plataforma abierta, volteo, granel y jaula</strong></span>'
+                );
+            } else if (camionId === 'camion3') {
+                descriptionTextZoom = descriptionTextZoom.replace(
+                    'semirremolques seco, caja cerrada, plataforma, cama baja, tolva, granel, tanque y portacontenedor',
+                    '<span class="highlight-orange"><strong>semirremolques seco, caja cerrada, plataforma, cama baja, tolva, granel, tanque y portacontenedor</strong></span>'
+                );
+            }
+            modalZoom.querySelector('.modal-zoom-desc').innerHTML = descriptionTextZoom;
             
             // Mostrar modal
             modalZoom.classList.add('activo');
@@ -633,7 +657,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Actualizar descripción
-            modalSpecs.querySelector('.modal-specs-descripcion').textContent = camion.description;
+            let descriptionText = camion.description;
+            // Resaltar palabras clave en naranja solo para camion1 y camion2
+            if (camionId === 'camion1') {
+                descriptionText = descriptionText.replace(
+                    'caja seca, plataforma y redilas',
+                    '<span class="highlight-orange"><strong>caja seca, plataforma y redilas</strong></span>'
+                );
+            } else if (camionId === 'camion2') {
+                descriptionText = descriptionText.replace(
+                    'caja seca cerrada, plataforma abierta, volteo, granel y jaula',
+                    '<span class="highlight-orange"><strong>caja seca cerrada, plataforma abierta, volteo, granel y jaula</strong></span>'
+                );
+            } else if (camionId === 'camion3') {
+                descriptionText = descriptionText.replace(
+                    'semirremolques seco, caja cerrada, plataforma, cama baja, tolva, granel, tanque y portacontenedor',
+                    '<span class="highlight-orange"><strong>semirremolques seco, caja cerrada, plataforma, cama baja, tolva, granel, tanque y portacontenedor</strong></span>'
+                );
+            }
+            modalSpecs.querySelector('.modal-specs-descripcion').innerHTML = descriptionText;
             
             // Actualizar especificaciones
             const specsGrid = modalSpecs.querySelector('.modal-specs-grid-flota');
@@ -1322,6 +1364,11 @@ const galleryData = {
                 description: 'Caja de 90m³ con sistema de temperatura controlada opcional. Perfecto para mercancías sensibles que requieren condiciones especiales durante el trayecto.'
             },
             { 
+                src: 'imageWEB/trailer/trailer3.png', 
+                caption: 'Trailer - Detalle Técnico',
+                description: 'Vista detallada del sistema de frenos y suspensión neumática. Tecnología avanzada para máxima seguridad en rutas de larga distancia.'
+            },
+            { 
                 src: 'imageWEB/trailer/trailer4.png', 
                 caption: 'Trailer - Sistema de Carga',
                 description: 'Plataforma de carga con elevador hidráulico. Permite manejo de mercancía pesada sin necesidad de montacargas en destino.'
@@ -1335,6 +1382,66 @@ const galleryData = {
                 src: 'imageWEB/trailer/trailer6.png', 
                 caption: 'Trailer - Compartimento Interior',
                 description: 'Interior mostrando sistema de sujeción profesional con rieles ajustables. Iluminación LED y ventilación para preservar calidad de la carga.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer7.png', 
+                caption: 'Trailer - Cabina de Conducción',
+                description: 'Cabina ergonómica con dormitorio integrado. Equipada con GPS avanzado, climatización y comodidades para viajes largos.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer8.png', 
+                caption: 'Trailer - Sistema de Seguridad',
+                description: 'Sistema de seguridad con cámaras de respaldo y sensores de proximidad. Protección completa para mercancía valiosa.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer9.png', 
+                caption: 'Trailer - Puertas Traseras',
+                description: 'Puertas traseras con apertura hidráulica automática. Diseño optimizado para carga y descarga eficiente en almacenes.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer10.png', 
+                caption: 'Trailer - Vista Lateral',
+                description: 'Vista lateral mostrando la estructura reforzada y aerodinámica. Construcción robusta para cargas pesadas.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer11.png', 
+                caption: 'Trailer - Ejes y Suspensión',
+                description: 'Sistema de ejes múltiples con suspensión neumática ajustable. Estabilidad excepcional en diferentes condiciones de carretera.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer12.png', 
+                caption: 'Trailer - Iluminación LED',
+                description: 'Sistema de iluminación LED interior para mejor visibilidad durante carga nocturna. Eficiencia energética y durabilidad.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer13.png', 
+                caption: 'Trailer - Panel de Control',
+                description: 'Panel de control electrónico con monitoreo de temperatura y humedad. Ideal para transporte de productos perecederos.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer14.png', 
+                caption: 'Trailer - Ruedas y Llantas',
+                description: 'Llantas de alto rendimiento con sistema de monitoreo de presión. Seguridad y eficiencia en consumo de combustible.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer15.png', 
+                caption: 'Trailer - Sistema de Anclaje',
+                description: 'Puntos de anclaje reforzados para sujeción de carga diversa. Compatible con diferentes tipos de embalaje y mercancía.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer16.png', 
+                caption: 'Trailer - Vista Trasera',
+                description: 'Vista trasera completa mostrando el diseño aerodinámico y sistema de luces de seguridad. Visibilidad óptima en carretera.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer17.png', 
+                caption: 'Trailer - Motor y Transmisión',
+                description: 'Motor diésel Euro 6 con transmisión automática. Rendimiento óptimo y bajo consumo de combustible para rutas largas.'
+            },
+            { 
+                src: 'imageWEB/trailer/trailer18.png', 
+                caption: 'Trailer - En Operación',
+                description: 'Unidad en operación real demostrando capacidad y versatilidad. Servicio confiable para tus necesidades de transporte.'
             }
         ]
     }
@@ -1454,14 +1561,20 @@ imageCounter.innerHTML = `
     function abrirLightbox(src, caption, description = '') {
     lightboxImage.src = src;
     
-    // Crear HTML estructurado para título y descripción
-    if (description) {
-        lightboxCaption.innerHTML = `
-            <h4>${caption}</h4>
-            <p>${description}</p>
-        `;
+    // Para trailers, omitir completamente el recuadro de descripción
+    if (src.includes('trailer')) {
+        lightboxCaption.style.display = 'none';
     } else {
-        lightboxCaption.innerHTML = `<h4>${caption}</h4>`;
+        lightboxCaption.style.display = 'block';
+        // Crear HTML estructurado para título y descripción
+        if (description) {
+            lightboxCaption.innerHTML = `
+                <h4>${caption}</h4>
+                <p>${description}</p>
+            `;
+        } else {
+            lightboxCaption.innerHTML = `<h4>${caption}</h4>`;
+        }
     }
     
     imageLightbox.classList.add('active');
@@ -1473,6 +1586,8 @@ imageCounter.innerHTML = `
     // ==========================================
     function cerrarLightbox() {
         imageLightbox.classList.remove('active');
+        // Reset display del caption
+        lightboxCaption.style.display = 'block';
         console.log('❌ Lightbox cerrado');
     }
     
