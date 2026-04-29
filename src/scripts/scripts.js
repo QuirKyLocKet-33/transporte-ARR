@@ -790,8 +790,14 @@ function animateStatsCorrectly() {
     const statCards = document.querySelectorAll('.stat-card h3');
     
     statCards.forEach(stat => {
+        // Si contiene spans (como para el "/"), no animar
+        if (stat.querySelector('span')) return;
+        
         // Guardar el texto ORIGINAL del HTML
         const originalText = stat.textContent.trim();
+        
+        // Si contiene "/" no animar (como "24 / 7")
+        if (originalText.includes('/')) return;
         
         // Extraer solo el número
         const number = parseInt(originalText.replace(/\D/g, ''));
