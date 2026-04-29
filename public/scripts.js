@@ -1060,13 +1060,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     animateCounter('yearsCounter', 25, '+', 2000);
                 }, 200);
                 setTimeout(() => {
-                    animateCounter('clientsCounter', 1200, '+', 2500);
+                    animateCounter('clientsCounter', 500, '+', 2500);
                 }, 400);
                 setTimeout(() => {
-                    animateCounter('trucksCounter', 85, '+', 2000);
+                    animateCounter('trucksCounter', 90, '+', 2000);
                 }, 600);
                 setTimeout(() => {
-                    animateCounter('kmCounter', 25000, 'M+', 3000);
+                    animateCounter('kmCounter', 25000, 'K+', 3000);
                 }, 800);
                 
                 statsObserver.unobserve(entry.target);
